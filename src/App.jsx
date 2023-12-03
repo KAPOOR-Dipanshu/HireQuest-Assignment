@@ -1,8 +1,6 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 import UserData from "./components/UserData";
-import EnhancedTable from "./components/EnhancedTableHead";
-import Buttons from "./components/Buttons";
 
 const API = "https://geektrust.s3-ap-southeast-1.amazonaws.com/adminui-problem/members.json";
 
@@ -21,12 +19,6 @@ function App() {
     }
   };
   
-  // const handleClick = () => {
-  //   const updatedUsers = users.map((user) => {
-  //     return { ...user, checked: true };
-  //   });
-  //   setUsers(updatedUsers);
-  // };
 
   useEffect(() => {
     fetchUser(API);
@@ -34,7 +26,6 @@ function App() {
 
   return (
     <>
-      <Buttons />
       <table className="border border-black border-collapse w-full">
         <thead>
           <tr>
